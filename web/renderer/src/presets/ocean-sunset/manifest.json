@@ -1,0 +1,22 @@
+{
+  "id": "ocean-sunset",
+  "name": "Ocean Sunset",
+  "description": "A low sun over a rolling sea: drifting clouds, a glittering light path on the waves and a hazy horizon.",
+  "category": "Ocean",
+  "tags": ["ocean", "sea", "sunset", "sun", "waves", "warm", "shader"],
+  "renderer": "webgl",
+  "accent": ["#1a1f4b", "#ff8a5c"],
+  "author": "DreamCanvas",
+  "license": "MIT - original procedural artwork",
+  "params": [
+    { "key": "skyTop", "label": "Upper sky", "type": "color", "default": "#1a1f4b" },
+    { "key": "horizon", "label": "Horizon glow", "type": "color", "default": "#ff8a5c" },
+    { "key": "sun", "label": "Sun colour", "type": "color", "default": "#ffd27a" },
+    { "key": "sea", "label": "Sea colour", "type": "color", "default": "#0b2a4a" },
+    { "key": "sunHeight", "label": "Sun height", "type": "range", "min": 0.02, "max": 0.8, "step": 0.01, "default": 0.22 },
+    { "key": "waves", "label": "Wave size", "type": "range", "min": 0.3, "max": 2.5, "step": 0.05, "default": 1 },
+    { "key": "clouds", "label": "Clouds", "type": "range", "min": 0, "max": 1, "step": 0.05, "default": 0.55 },
+    { "key": "flow", "label": "Motion speed", "type": "range", "min": 0, "max": 2, "step": 0.05, "default": 0.6 },
+    { "key": "quality", "label": "Render quality", "type": "range", "min": 0.35, "max": 1, "step": 0.05, "default": 0.7 }
+  ]
+}

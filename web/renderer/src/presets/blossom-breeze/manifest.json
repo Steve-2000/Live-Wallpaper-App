@@ -1,0 +1,21 @@
+{
+  "id": "blossom-breeze",
+  "name": "Blossom Breeze",
+  "description": "Petals tumble on a gentle breeze from a flowering branch against a soft pastel sky. The branch is grown procedurally.",
+  "category": "Nature",
+  "tags": ["nature", "flowers", "petals", "spring", "pastel", "calm"],
+  "renderer": "canvas2d",
+  "accent": ["#ffd6e7", "#ff8fbf"],
+  "author": "DreamCanvas",
+  "license": "MIT - original procedural artwork",
+  "params": [
+    { "key": "skyTop", "label": "Upper sky", "type": "color", "default": "#ffc9dd" },
+    { "key": "skyBottom", "label": "Lower sky", "type": "color", "default": "#fff4e6" },
+    { "key": "petal", "label": "Petal colour", "type": "color", "default": "#ff9ec7" },
+    { "key": "branchColor", "label": "Branch colour", "type": "color", "default": "#4a2c2a" },
+    { "key": "petals", "label": "Petals", "type": "range", "min": 10, "max": 400, "step": 5, "default": 120 },
+    { "key": "wind", "label": "Wind", "type": "range", "min": -1.5, "max": 1.5, "step": 0.05, "default": 0.5 },
+    { "key": "speed", "label": "Fall speed", "type": "range", "min": 0.1, "max": 3, "step": 0.05, "default": 1 },
+    { "key": "branch", "label": "Show branch", "type": "bool", "default": true }
+  ]
+}

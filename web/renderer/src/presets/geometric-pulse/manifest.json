@@ -1,0 +1,23 @@
+{
+  "id": "geometric-pulse",
+  "name": "Geometric Pulse",
+  "description": "Nested neon polygons turn against each other while a pulse ripples outward from the centre.",
+  "category": "Neon",
+  "tags": ["neon", "geometric", "minimal", "lines", "hypnotic"],
+  "renderer": "canvas2d",
+  "accent": ["#05050c", "#00f0ff"],
+  "author": "DreamCanvas",
+  "license": "MIT - original procedural artwork",
+  "params": [
+    { "key": "background", "label": "Background", "type": "color", "default": "#05050c" },
+    { "key": "colorA", "label": "Inner colour", "type": "color", "default": "#00f0ff" },
+    { "key": "colorB", "label": "Outer colour", "type": "color", "default": "#ff2bd6" },
+    { "key": "sides", "label": "Sides", "type": "range", "min": 3, "max": 10, "step": 1, "default": 6 },
+    { "key": "rings", "label": "Rings", "type": "range", "min": 3, "max": 30, "step": 1, "default": 14 },
+    { "key": "pulse", "label": "Pulse", "type": "range", "min": 0, "max": 1, "step": 0.05, "default": 0.5 },
+    { "key": "twist", "label": "Rotation speed", "type": "range", "min": 0, "max": 2, "step": 0.05, "default": 0.5 },
+    { "key": "lineWidth", "label": "Line width", "type": "range", "min": 0.5, "max": 6, "step": 0.25, "default": 2 },
+    { "key": "glow", "label": "Glow", "type": "range", "min": 0, "max": 1, "step": 0.05, "default": 0.6 },
+    { "key": "trails", "label": "Motion trails", "type": "bool", "default": true }
+  ]
+}

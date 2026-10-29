@@ -1,0 +1,22 @@
+{
+  "id": "underwater",
+  "name": "Underwater Light",
+  "description": "Sunbeams slant through clear water, rippling light patterns dance across the sandy floor and bubbles drift up.",
+  "category": "Ocean",
+  "tags": ["ocean", "underwater", "sea", "caustics", "calm", "blue", "shader"],
+  "renderer": "webgl",
+  "accent": ["#021a2e", "#5fe3f0"],
+  "author": "DreamCanvas",
+  "license": "MIT - original procedural artwork",
+  "params": [
+    { "key": "deep", "label": "Deep water", "type": "color", "default": "#021a2e" },
+    { "key": "shallow", "label": "Shallow water", "type": "color", "default": "#0e7c8c" },
+    { "key": "light", "label": "Light colour", "type": "color", "default": "#bff6ff" },
+    { "key": "sand", "label": "Sand colour", "type": "color", "default": "#c9b48a" },
+    { "key": "caustics", "label": "Light ripples", "type": "range", "min": 0, "max": 1.5, "step": 0.05, "default": 1 },
+    { "key": "rays", "label": "Sunbeams", "type": "range", "min": 0, "max": 1, "step": 0.05, "default": 0.6 },
+    { "key": "bubbles", "label": "Bubbles", "type": "range", "min": 0, "max": 1, "step": 0.05, "default": 0.5 },
+    { "key": "flow", "label": "Speed", "type": "range", "min": 0, "max": 2, "step": 0.05, "default": 0.8 },
+    { "key": "quality", "label": "Render quality", "type": "range", "min": 0.35, "max": 1, "step": 0.05, "default": 0.6 }
+  ]
+}

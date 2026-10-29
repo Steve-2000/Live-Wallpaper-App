@@ -1,0 +1,21 @@
+{
+  "id": "firefly-forest",
+  "name": "Firefly Forest",
+  "description": "Glowing fireflies drift between layered pine silhouettes under a moonlit sky. Trees are generated procedurally.",
+  "category": "Nature",
+  "tags": ["nature", "forest", "night", "fireflies", "dark"],
+  "renderer": "pixi",
+  "accent": ["#071226", "#d8ff6a"],
+  "author": "DreamCanvas",
+  "license": "MIT - original procedural artwork",
+  "params": [
+    { "key": "fireflies", "label": "Fireflies", "type": "range", "min": 10, "max": 400, "step": 5, "default": 90 },
+    { "key": "glowColor", "label": "Firefly colour", "type": "color", "default": "#d8ff6a" },
+    { "key": "glowSize", "label": "Glow size", "type": "range", "min": 0.4, "max": 2.5, "step": 0.05, "default": 1 },
+    { "key": "drift", "label": "Drift speed", "type": "range", "min": 0.1, "max": 3, "step": 0.05, "default": 1 },
+    { "key": "skyTop", "label": "Sky (top)", "type": "color", "default": "#050b1c" },
+    { "key": "skyBottom", "label": "Sky (horizon)", "type": "color", "default": "#14323a" },
+    { "key": "treeDensity", "label": "Forest density", "type": "range", "min": 0.3, "max": 1.6, "step": 0.05, "default": 1 },
+    { "key": "moon", "label": "Show moon", "type": "bool", "default": true }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "sceneVersion": 2,
+  "id": "template-desk-widgets",
+  "name": "Desk Widgets",
+  "width": 1920,
+  "height": 1080,
+  "background": {
+    "kind": "preset", "presetId": "aurora", "seed": 2207,
+    "params": { "colorA": "#36f0c0", "colorB": "#8f6bff", "skyColor": "#050c1c", "intensity": 0.75, "flow": 0.3, "stars": 0.3, "mountains": true, "quality": 0.6 }
+  },
+  "timeline": { "duration": 10, "loop": true },
+  "objects": [
+    { "id": "fireflies", "type": "particles", "name": "Drifting lights", "x": 960, "y": 860, "width": 1920, "height": 440, "seed": 9,
+      "props": { "kind": "fireflies", "count": 28, "color": "#9ff7dc", "size": 0.7, "wind": 0 }, "opacity": 0.7 },
+
+    { "id": "flip", "type": "flip-clock", "name": "Flip clock", "x": 960, "y": 250, "width": 700, "height": 230, "seed": 1,
+      "props": { "format": "24-hour", "seconds": false, "card": "#0b1322", "cardOpacity": 0.72, "digits": "#eefcf8", "font": "Bahnschrift" },
+      "behaviors": [{ "id": "flip-float", "type": "float", "enabled": true, "params": { "amplitude": 3, "drift": 0, "tilt": 0, "period": 9 } }] },
+
+    { "id": "analog", "type": "analog-clock", "name": "Analog clock", "x": 430, "y": 640, "width": 330, "height": 330, "seed": 2,
+      "props": { "look": "Modern", "face": "#0b1322", "faceOpacity": 0.6, "hands": "#eefcf8", "accent": "#36f0c0",
+                 "numerals": "None", "seconds": true, "sweep": true, "font": "Segoe UI Light" } },
+
+    { "id": "system", "type": "system-monitor", "name": "System monitor", "x": 960, "y": 640, "width": 560, "height": 250, "seed": 4,
+      "props": { "look": "Rings", "cpu": true, "memory": true, "battery": true,
+                 "cpuColor": "#36f0c0", "memoryColor": "#8ab4ff", "batteryColor": "#b99bff", "color": "#eefcf8", "font": "Segoe UI",
+                 "panel": true, "panelColor": "#0b1322", "panelOpacity": 0.5 } },
+
+    { "id": "calendar", "type": "calendar", "name": "Calendar", "x": 1490, "y": 640, "width": 400, "height": 360, "seed": 3,
+      "props": { "color": "#eefcf8", "accent": "#36f0c0", "mondayFirst": true, "font": "Segoe UI",
+                 "panel": true, "panelColor": "#0b1322", "panelOpacity": 0.5 } },
+
+    { "id": "countdown", "type": "countdown", "name": "Countdown", "x": 960, "y": 910, "width": 620, "height": 170, "seed": 6,
+      "props": { "title": "New Year", "target": "2027-01-01 00:00", "doneText": "Happy New Year!", "seconds": true,
+                 "font": "Segoe UI Light", "color": "#eefcf8", "glow": 0.35, "panel": false } }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "id": "flip-clock",
+  "name": "Flip Clock",
+  "description": "A full-screen flip clock: big digits on dark cards that fold over like a mechanical clock when the time changes, with AM/PM.",
+  "category": "Clocks",
+  "tags": ["clock", "time", "flip", "minimal", "dark", "retro"],
+  "renderer": "canvas2d",
+  "accent": ["#000000", "#f2f2f2"],
+  "author": "DreamCanvas",
+  "license": "MIT - original procedural artwork",
+  "params": [
+    { "key": "format", "label": "Format", "type": "select", "options": ["12-hour", "24-hour"], "default": "12-hour" },
+    { "key": "showSeconds", "label": "Show seconds", "type": "bool", "default": false },
+    { "key": "showAmPm", "label": "Show AM / PM", "type": "bool", "default": true },
+    { "key": "showDate", "label": "Show date", "type": "bool", "default": false },
+    { "key": "background", "label": "Background", "type": "color", "default": "#000000" },
+    { "key": "card", "label": "Card colour", "type": "color", "default": "#151515" },
+    { "key": "digits", "label": "Digit colour", "type": "color", "default": "#e9e9e9" },
+    { "key": "font", "label": "Font", "type": "select", "options": ["Classic", "Condensed", "Rounded", "Thin"], "default": "Classic" },
+    { "key": "size", "label": "Clock size", "type": "range", "min": 0.4, "max": 1, "step": 0.05, "default": 0.85 },
+    { "key": "corner", "label": "Card corners", "type": "range", "min": 0, "max": 0.2, "step": 0.01, "default": 0.06 },
+    { "key": "flipTime", "label": "Flip speed (s)", "type": "range", "min": 0.2, "max": 1.5, "step": 0.05, "default": 0.6 }
+  ]
+}

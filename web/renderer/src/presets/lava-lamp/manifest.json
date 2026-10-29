@@ -1,0 +1,21 @@
+{
+  "id": "lava-lamp",
+  "name": "Lava Lamp",
+  "description": "Soft glowing blobs rise, merge and split apart like wax in a lava lamp.",
+  "category": "Abstract",
+  "tags": ["abstract", "retro", "blobs", "colourful", "calm", "shader"],
+  "renderer": "webgl",
+  "accent": ["#2a0a3a", "#ff7a3a"],
+  "author": "DreamCanvas",
+  "license": "MIT - original procedural artwork",
+  "params": [
+    { "key": "colorA", "label": "Wax colour", "type": "color", "default": "#ff5e3a" },
+    { "key": "colorB", "label": "Hot centre", "type": "color", "default": "#ffd23f" },
+    { "key": "background", "label": "Liquid colour", "type": "color", "default": "#2a0a3a" },
+    { "key": "blobs", "label": "Blobs", "type": "range", "min": 2, "max": 12, "step": 1, "default": 7 },
+    { "key": "size", "label": "Blob size", "type": "range", "min": 0.5, "max": 1.8, "step": 0.05, "default": 1 },
+    { "key": "glow", "label": "Glow", "type": "range", "min": 0, "max": 1.5, "step": 0.05, "default": 0.7 },
+    { "key": "flow", "label": "Speed", "type": "range", "min": 0, "max": 2, "step": 0.05, "default": 0.6 },
+    { "key": "quality", "label": "Render quality", "type": "range", "min": 0.35, "max": 1, "step": 0.05, "default": 0.6 }
+  ]
+}

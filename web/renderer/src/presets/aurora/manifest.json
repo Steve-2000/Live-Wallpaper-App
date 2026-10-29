@@ -1,0 +1,21 @@
+{
+  "id": "aurora",
+  "name": "Aurora Sky",
+  "description": "Rippling aurora curtains over a star-filled night sky and a dark mountain horizon, rendered by a GPU shader.",
+  "category": "Nature",
+  "tags": ["nature", "sky", "night", "aurora", "shader"],
+  "renderer": "webgl",
+  "accent": ["#04101d", "#3dffb0"],
+  "author": "DreamCanvas",
+  "license": "MIT - original procedural artwork",
+  "params": [
+    { "key": "colorA", "label": "Aurora colour", "type": "color", "default": "#3dffb0" },
+    { "key": "colorB", "label": "Aurora fringe", "type": "color", "default": "#8a5cff" },
+    { "key": "skyColor", "label": "Sky colour", "type": "color", "default": "#04101d" },
+    { "key": "intensity", "label": "Light intensity", "type": "range", "min": 0.2, "max": 2, "step": 0.05, "default": 1 },
+    { "key": "flow", "label": "Flow speed", "type": "range", "min": 0, "max": 2, "step": 0.05, "default": 0.6 },
+    { "key": "stars", "label": "Star density", "type": "range", "min": 0, "max": 1, "step": 0.05, "default": 0.6 },
+    { "key": "mountains", "label": "Mountains", "type": "bool", "default": true },
+    { "key": "quality", "label": "Render quality", "type": "range", "min": 0.35, "max": 1, "step": 0.05, "default": 0.7 }
+  ]
+}

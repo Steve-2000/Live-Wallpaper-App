@@ -1,0 +1,20 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/DreamCanvas.App/DreamCanvas.App.csproj" />
+    <Project Path="src/DreamCanvas.Core/DreamCanvas.Core.csproj" />
+    <Project Path="src/DreamCanvas.Engine/DreamCanvas.Engine.csproj" />
+    <Project Path="src/DreamCanvas.Hosting/DreamCanvas.Hosting.csproj">
+      <Platform Project="x64" />
+    </Project>
+    <Project Path="src/DreamCanvas.Native/DreamCanvas.Native.csproj" />
+    <Project Path="src/DreamCanvas.Screensaver/DreamCanvas.Screensaver.csproj">
+      <Platform Project="x64" />
+    </Project>
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/DreamCanvas.Core.Tests/DreamCanvas.Core.Tests.csproj" />
+  </Folder>
+  <Folder Name="/tools/">
+    <Project Path="tools/DreamCanvas.Cli/DreamCanvas.Cli.csproj" />
+  </Folder>
+</Solution>

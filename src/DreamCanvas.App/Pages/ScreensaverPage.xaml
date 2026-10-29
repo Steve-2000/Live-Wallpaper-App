@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="DreamCanvas.App.Pages.ScreensaverPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="using:DreamCanvas.App.Controls">
+
+    <ScrollViewer Padding="28,20,28,28">
+        <StackPanel Spacing="8" MaxWidth="900" HorizontalAlignment="Left">
+            <TextBlock Text="Screensaver &amp; Lock Screen" Style="{StaticResource DcPageTitle}" />
+            <TextBlock Opacity="0.7" TextWrapping="Wrap"
+                       Text="DreamCanvas can show animations in four ways. Windows' secure lock screen can't run live animations, so DreamCanvas never tries to replace or bypass it." />
+
+            <!-- The four modes, clearly labelled -->
+            <Grid ColumnSpacing="10" RowSpacing="10" Margin="0,12,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Border Style="{StaticResource DcCard}">
+                    <StackPanel Spacing="4">
+                        <TextBlock Text="Desktop Mode" FontWeight="SemiBold" />
+                        <TextBlock FontSize="12" Opacity="0.75" TextWrapping="Wrap" Text="Live wallpaper behind your desktop icons while you work. Set it from the gallery." />
+                    </StackPanel>
+                </Border>
+                <Border Grid.Column="1" Style="{StaticResource DcCard}">
+                    <StackPanel Spacing="4">
+                        <TextBlock Text="Screensaver Mode" FontWeight="SemiBold" />
+                        <TextBlock FontSize="12" Opacity="0.75" TextWrapping="Wrap" Text="A real Windows screensaver. Windows starts it after inactivity and, if you've chosen it there, asks you to sign in when it ends." />
+                    </StackPanel>
+                </Border>
+                <Border Grid.Row="1" Style="{StaticResource DcCard}">
+                    <StackPanel Spacing="4">
+                        <TextBlock Text="Idle Display Mode" FontWeight="SemiBold" />
+                        <TextBlock FontSize="12" Opacity="0.75" TextWrapping="Wrap" Text="A full-screen animation DreamCanvas shows after inactivity. It doesn't change any lock, sleep or security setting; Windows still locks on its own schedule." />
+                    </StackPanel>
+                </Border>
+                <Border Grid.Row="1" Grid.Column="1" Style="{StaticResource DcCard}">
+                    <StackPanel Spacing="4">
+                        <TextBlock Text="Lock Screen Export" FontWeight="SemiBold" />
+                        <TextBlock FontSize="12" Opacity="0.75" TextWrapping="Wrap" Text="Saves a still image of a wallpaper at your screen's resolution for the Windows lock screen (which only supports still images)." />
+                    </StackPanel>
+                </Border>
+            </Grid>
+
+            <!-- Screensaver -->
+            <TextBlock Text="Screensaver Mode" Style="{StaticResource DcSectionTitle}" />
+            <Border Style="{StaticResource DcCard}">
+                <StackPanel Spacing="12">
+                    <InfoBar x:Name="PolicyInfo" Severity="Warning" IsClosable="False" Title="Managed by your organisation"
+                             Message="Screensaver settings on this PC are set by policy, so DreamCanvas won't change them." />
+                    <ToggleSwitch x:Name="ScreensaverToggle" Header="Use DreamCanvas as my Windows screensaver" Toggled="OnScreensaverToggled" />
+                    <ComboBox x:Name="TimeoutBox" Header="Start after" MinWidth="180" SelectionChanged="OnTimeoutChanged" />
+                    <controls:SelectionEditor x:Name="ScreensaverSelection" />
+                    <TextBlock x:Name="ScreensaverStatus" FontSize="12" Opacity="0.7" TextWrapping="Wrap" />
+                    <StackPanel Orientation="Horizontal" Spacing="8">
+                        <Button Content="Preview" Click="OnPreviewScreensaver" />
+                        <Button Content="Windows screen saver settings" Click="OnOpenWindowsScreensaver" />
+                    </StackPanel>
+                    <InfoBar x:Name="ScreensaverInfo" IsClosable="True" />
+                </StackPanel>
+            </Border>
+
+            <!-- Idle display -->
+            <TextBlock Text="Idle Display Mode" Style="{StaticResource DcSectionTitle}" />
+            <Border Style="{StaticResource DcCard}">
+                <StackPanel Spacing="12">
+                    <ToggleSwitch x:Name="IdleToggle" Header="Show a DreamCanvas animation when I'm away" Toggled="OnIdleChanged" />
+                    <ComboBox x:Name="IdleTimeoutBox" Header="After" MinWidth="180" SelectionChanged="OnIdleChanged" />
+                    <controls:SelectionEditor x:Name="IdleSelection" />
+                    <TextBlock FontSize="12" Opacity="0.7" TextWrapping="Wrap"
+                               Text="Needs the wallpaper engine running (it starts with Windows if enabled in General Settings). Skipped during presentations, games and full-screen video. Closes on any key, click or mouse movement; the key or click that wakes it is not passed on." />
+                    <InfoBar x:Name="IdleInfo" IsClosable="True" />
+                </StackPanel>
+            </Border>
+
+            <!-- Export -->
+            <TextBlock Text="Lock Screen Export" Style="{StaticResource DcSectionTitle}" />
+            <Border Style="{StaticResource DcCard}">
+                <StackPanel Spacing="12">
+                    <ComboBox x:Name="ExportPreset" Header="Wallpaper" MinWidth="260" />
+                    <TextBlock x:Name="ExportSize" FontSize="12" Opacity="0.7" />
+                    <StackPanel Orientation="Horizontal" Spacing="8">
+                        <Button x:Name="ExportButton" Style="{StaticResource AccentButtonStyle}" Content="Export image" Click="OnExport" />
+                        <ProgressRing x:Name="ExportProgress" IsActive="False" Width="20" Height="20" />
+                    </StackPanel>
+                    <InfoBar x:Name="ExportInfo" IsClosable="True">
+                        <InfoBar.ActionButton>
+                            <Button x:Name="SetLockScreenButton" Content="Set as lock screen" Click="OnSetLockScreen" />
+                        </InfoBar.ActionButton>
+                    </InfoBar>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </ScrollViewer>
+</Page>

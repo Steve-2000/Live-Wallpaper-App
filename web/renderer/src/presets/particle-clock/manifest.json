@@ -1,0 +1,22 @@
+{
+  "id": "particle-clock",
+  "name": "Glowing Particle Clock",
+  "description": "The current local time built from hundreds of glowing particles that swarm into each new digit.",
+  "category": "Clocks",
+  "tags": ["clock", "particles", "neon", "minimal"],
+  "renderer": "canvas2d",
+  "accent": ["#05060d", "#5ee7ff"],
+  "author": "DreamCanvas",
+  "license": "MIT - original procedural artwork",
+  "params": [
+    { "key": "color", "label": "Particle colour", "type": "color", "default": "#5ee7ff" },
+    { "key": "background", "label": "Background", "type": "color", "default": "#05060d" },
+    { "key": "particleSize", "label": "Particle size", "type": "range", "min": 1, "max": 5, "step": 0.1, "default": 2.2 },
+    { "key": "density", "label": "Particle density", "type": "range", "min": 0.4, "max": 1.6, "step": 0.05, "default": 1 },
+    { "key": "scale", "label": "Clock size", "type": "range", "min": 0.3, "max": 1, "step": 0.05, "default": 0.6 },
+    { "key": "glow", "label": "Glow", "type": "range", "min": 0, "max": 1, "step": 0.05, "default": 0.6 },
+    { "key": "use24h", "label": "24-hour time", "type": "bool", "default": true },
+    { "key": "showSeconds", "label": "Show seconds", "type": "bool", "default": true },
+    { "key": "showDate", "label": "Show date", "type": "bool", "default": true }
+  ]
+}

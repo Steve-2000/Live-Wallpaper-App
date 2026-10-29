@@ -1,0 +1,13 @@
+{
+  "sceneVersion": 2,
+  "id": "template-word-clock",
+  "name": "Word Clock",
+  "width": 1920,
+  "height": 1080,
+  "background": { "kind": "preset", "presetId": "aurora", "params": { "intensity": 0.8, "flow": 0.4, "quality": 0.6 }, "seed": 1337 },
+  "timeline": { "duration": 10, "loop": true },
+  "objects": [
+    { "id": "words", "type": "word-clock", "name": "Word clock", "x": 960, "y": 520, "width": 620, "height": 580, "seed": 1,
+      "props": { "lit": "#ffffff", "dim": 0.12, "glow": 0.8, "font": "Bahnschrift", "panel": true, "panelColor": "#050a14", "panelOpacity": 0.45 } }
+  ]
+}

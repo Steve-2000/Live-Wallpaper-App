@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <RootNamespace>DreamCanvas.Engine</RootNamespace>
+    <AssemblyName>DreamCanvas.Engine</AssemblyName>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
+    <ApplicationIcon>..\..\assets\dreamcanvas.ico</ApplicationIcon>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <SelfContained>true</SelfContained>
+    <!-- The WebView2 package always references its (unused here) WPF assembly, which trips a WindowsBase version notice. -->
+    <MSBuildWarningsAsMessages>MSB3277</MSBuildWarningsAsMessages>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DreamCanvas.Core\DreamCanvas.Core.csproj" />
+    <ProjectReference Include="..\DreamCanvas.Native\DreamCanvas.Native.csproj" />
+    <ProjectReference Include="..\DreamCanvas.Hosting\DreamCanvas.Hosting.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\..\assets\dreamcanvas.ico" LogicalName="dreamcanvas.ico" />
+  </ItemGroup>
+</Project>

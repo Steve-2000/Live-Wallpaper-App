@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="DreamCanvas.App.Pages.DesktopPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ScrollViewer Padding="28,20,28,28">
+        <StackPanel Spacing="8" MaxWidth="900" HorizontalAlignment="Left">
+            <TextBlock Text="Desktop Settings" Style="{StaticResource DcPageTitle}" />
+            <TextBlock Opacity="0.7" TextWrapping="Wrap"
+                       Text="Desktop Mode draws the live wallpaper behind your desktop icons. The icons keep working normally, and the wallpaper engine keeps running in the system tray after you close this window." />
+
+            <Border Style="{StaticResource DcCard}" Margin="0,12,0,0">
+                <StackPanel Spacing="12">
+                    <Grid ColumnSpacing="12">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Ellipse x:Name="StatusDot" Width="10" Height="10" Fill="Gray" VerticalAlignment="Center" />
+                        <StackPanel Grid.Column="1">
+                            <TextBlock x:Name="StatusTitle" FontWeight="SemiBold" Text="Checking wallpaper engine..." />
+                            <TextBlock x:Name="StatusDetail" Opacity="0.7" FontSize="12" TextWrapping="Wrap" />
+                        </StackPanel>
+                    </Grid>
+                    <StackPanel Orientation="Horizontal" Spacing="8">
+                        <Button x:Name="StartButton" Content="Start engine" Click="OnStart" />
+                        <Button x:Name="PauseButton" Content="Pause" Click="OnPause" />
+                        <Button x:Name="ResumeButton" Content="Resume" Click="OnResume" />
+                        <Button x:Name="StopButton" Content="Stop live wallpaper" Click="OnStop" />
+                    </StackPanel>
+                    <InfoBar x:Name="Info" IsClosable="True" />
+                </StackPanel>
+            </Border>
+
+            <TextBlock Text="Monitors" Style="{StaticResource DcSectionTitle}" />
+            <TextBlock Opacity="0.7" FontSize="12" TextWrapping="Wrap"
+                       Text="Each monitor gets its own wallpaper window at its native resolution (1080p, 1440p, 4K, ultrawide and portrait are all supported). Layout and resolution changes are picked up automatically. To give a monitor its own wallpaper, choose it in the gallery before applying." />
+            <StackPanel x:Name="MonitorList" Spacing="8" />
+        </StackPanel>
+    </ScrollViewer>
+</Page>

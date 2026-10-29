@@ -1,0 +1,23 @@
+{
+  "id": "analog-clock",
+  "name": "Minimal Analog Clock",
+  "description": "A clean analog clock showing your local time, with a smoothly sweeping second hand and an optional date.",
+  "category": "Clocks",
+  "tags": ["clock", "time", "minimal", "analog", "elegant"],
+  "renderer": "canvas2d",
+  "accent": ["#07080d", "#ff5d5d"],
+  "author": "DreamCanvas",
+  "license": "MIT - original procedural artwork",
+  "params": [
+    { "key": "background", "label": "Background", "type": "color", "default": "#07080d" },
+    { "key": "face", "label": "Clock face", "type": "color", "default": "#12151f" },
+    { "key": "hands", "label": "Hands and marks", "type": "color", "default": "#eef1f7" },
+    { "key": "accent", "label": "Second hand", "type": "color", "default": "#ff5d5d" },
+    { "key": "size", "label": "Clock size", "type": "range", "min": 0.25, "max": 0.95, "step": 0.05, "default": 0.6 },
+    { "key": "numerals", "label": "Numbers", "type": "select", "options": ["None", "12, 3, 6, 9", "All"], "default": "12, 3, 6, 9" },
+    { "key": "sweep", "label": "Smooth second hand", "type": "bool", "default": true },
+    { "key": "showSeconds", "label": "Second hand", "type": "bool", "default": true },
+    { "key": "showDate", "label": "Show date", "type": "bool", "default": true },
+    { "key": "glow", "label": "Glow", "type": "range", "min": 0, "max": 1, "step": 0.05, "default": 0.4 }
+  ]
+}

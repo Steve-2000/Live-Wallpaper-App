@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="DreamCanvas.App.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="DreamCanvas">
+    <Grid Background="{StaticResource DcWindowBackground}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="36" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid x:Name="AppTitleBar" Padding="14,0,0,0">
+            <StackPanel Orientation="Horizontal" Spacing="10" VerticalAlignment="Center">
+                <Image Source="Assets/dreamcanvas.ico" Width="18" Height="18" />
+                <TextBlock Text="DreamCanvas" Style="{StaticResource CaptionTextBlockStyle}" VerticalAlignment="Center" />
+            </StackPanel>
+        </Grid>
+
+        <NavigationView x:Name="Nav" Grid.Row="1"
+                        IsBackButtonVisible="Collapsed"
+                        IsSettingsVisible="False"
+                        PaneDisplayMode="Left"
+                        OpenPaneLength="220"
+                        SelectionChanged="OnNavSelectionChanged">
+            <NavigationView.MenuItems>
+                <NavigationViewItem Content="Home" Tag="home">
+                    <NavigationViewItem.Icon><FontIcon Glyph="&#xE80F;" /></NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem Content="Wallpaper Gallery" Tag="gallery">
+                    <NavigationViewItem.Icon><FontIcon Glyph="&#xE8B9;" /></NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem Content="Video Wallpapers" Tag="videos" ToolTipService.ToolTip="Real videos: your own files, or free videos from Pexels and Pixabay">
+                    <NavigationViewItem.Icon><FontIcon Glyph="&#xE714;" /></NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItemHeader Content="Create" />
+                <NavigationViewItem Content="Live Wallpaper Editor" Tag="editor">
+                    <NavigationViewItem.Icon><FontIcon Glyph="&#xE70F;" /></NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem Content="My Projects" Tag="projects">
+                    <NavigationViewItem.Icon><FontIcon Glyph="&#xE8F1;" /></NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItemHeader Content="Desktop" />
+                <NavigationViewItem Content="Desktop Settings" Tag="desktop">
+                    <NavigationViewItem.Icon><FontIcon Glyph="&#xE7F4;" /></NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem Content="Screensaver" Tag="screensaver" ToolTipService.ToolTip="Screensaver, idle display and lock screen">
+                    <NavigationViewItem.Icon><FontIcon Glyph="&#xE7E8;" /></NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem Content="Performance" Tag="performance">
+                    <NavigationViewItem.Icon><FontIcon Glyph="&#xEC4A;" /></NavigationViewItem.Icon>
+                </NavigationViewItem>
+            </NavigationView.MenuItems>
+            <NavigationView.FooterMenuItems>
+                <NavigationViewItem Content="General Settings" Tag="settings">
+                    <NavigationViewItem.Icon><FontIcon Glyph="&#xE713;" /></NavigationViewItem.Icon>
+                </NavigationViewItem>
+            </NavigationView.FooterMenuItems>
+            <Frame x:Name="ContentFrame" />
+        </NavigationView>
+
+        <Border x:Name="StartupErrorPanel" Grid.Row="1" Visibility="Collapsed" Background="{StaticResource DcWindowBackground}">
+            <StackPanel MaxWidth="560" VerticalAlignment="Center" Spacing="12">
+                <TextBlock Text="DreamCanvas could not start" Style="{StaticResource TitleTextBlockStyle}" />
+                <TextBlock x:Name="StartupErrorText" TextWrapping="Wrap" IsTextSelectionEnabled="True" />
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

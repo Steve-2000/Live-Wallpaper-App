@@ -1,0 +1,22 @@
+{
+  "id": "galaxy",
+  "name": "Spiral Galaxy",
+  "description": "A slowly turning spiral galaxy with differential rotation, a glowing core and a twinkling star field.",
+  "category": "Space",
+  "tags": ["space", "stars", "galaxy", "dark"],
+  "renderer": "webgl",
+  "accent": ["#03040c", "#6b8cff"],
+  "author": "DreamCanvas",
+  "license": "MIT - original procedural artwork",
+  "params": [
+    { "key": "starCount", "label": "Stars", "type": "range", "min": 1000, "max": 30000, "step": 500, "default": 9000 },
+    { "key": "arms", "label": "Spiral arms", "type": "range", "min": 2, "max": 6, "step": 1, "default": 3 },
+    { "key": "twist", "label": "Arm twist", "type": "range", "min": 1, "max": 8, "step": 0.1, "default": 4.2 },
+    { "key": "rotation", "label": "Rotation speed", "type": "range", "min": 0, "max": 0.6, "step": 0.01, "default": 0.08 },
+    { "key": "size", "label": "Galaxy size", "type": "range", "min": 0.3, "max": 1.4, "step": 0.05, "default": 0.95 },
+    { "key": "coreColor", "label": "Core colour", "type": "color", "default": "#ffd9a0" },
+    { "key": "armColor", "label": "Arm colour", "type": "color", "default": "#6b8cff" },
+    { "key": "background", "label": "Background", "type": "color", "default": "#03040c" },
+    { "key": "twinkle", "label": "Twinkling stars", "type": "bool", "default": true }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "id": "solar-system",
+  "name": "Solar System",
+  "description": "A 3D orrery: eight planets circle a glowing sun at proportional speeds while the camera slowly drifts around.",
+  "category": "3D",
+  "tags": ["space", "3d", "planets", "orbit"],
+  "renderer": "three",
+  "accent": ["#020308", "#ffb347"],
+  "author": "DreamCanvas",
+  "license": "MIT - original procedural artwork",
+  "params": [
+    { "key": "orbitSpeed", "label": "Orbit speed", "type": "range", "min": 0.05, "max": 4, "step": 0.05, "default": 1 },
+    { "key": "planetScale", "label": "Planet size", "type": "range", "min": 0.5, "max": 2.5, "step": 0.05, "default": 1 },
+    { "key": "cameraDistance", "label": "Camera distance", "type": "range", "min": 18, "max": 90, "step": 1, "default": 48 },
+    { "key": "cameraTilt", "label": "Camera tilt", "type": "range", "min": 5, "max": 85, "step": 1, "default": 28 },
+    { "key": "cameraOrbit", "label": "Camera drift", "type": "range", "min": 0, "max": 0.3, "step": 0.01, "default": 0.04 },
+    { "key": "starCount", "label": "Background stars", "type": "range", "min": 0, "max": 6000, "step": 100, "default": 2500 },
+    { "key": "sunColor", "label": "Sun colour", "type": "color", "default": "#ffb347" },
+    { "key": "showOrbits", "label": "Show orbit lines", "type": "bool", "default": true }
+  ]
+}
